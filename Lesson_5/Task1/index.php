@@ -4,7 +4,7 @@ spl_autoload_register(function ($class){
 });
 function sendMSGtoUser ($text) {
     $msg = new SMS(new Facebook(new Message()));
-    echo $msg->sendMsg($text);
+    return $msg->sendMsg($text);
 }
 
 sendMSGtoUser('Test');
